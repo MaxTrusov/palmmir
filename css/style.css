@@ -1,0 +1,553 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+    }
+#modal{
+    display: none;    
+    border-radius: 5px; 
+}
+#map-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 52, 52, 0.95);
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+.adresText{
+    color: #fff;
+    max-width: max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.fa-times-circle{
+    position: absolute;
+    top: 50px;
+    right: 15%;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+}
+#map{
+    width: 70%;    
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.body-class-control{
+    overflow: hidden;
+}
+/* ------------------------------ */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+html, body{
+    position: relative;
+    max-width: 100%;    
+    /* max-height: 100%;   */
+    margin: 0;
+    padding: 0; 
+    -webkit-text-size-adjust: none;   
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.icon_phone,
+.local-map{
+    display: none;
+}
+/* ---------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* !-- css Header */
+    .header_home{
+        max-width: 100%;
+        position: relative;
+        z-index: 3;
+        box-shadow: -2px 10px 8px rgba(250,250,250,0.5);             
+        margin-bottom: 20px;
+    }        
+/* !-- css Nav */
+ 
+    header nav{
+        background-color: rgba(6, 4, 95, 0.9);
+        justify-content: center;
+        border-bottom: 1px solid #fff;        
+    }
+    header nav ul{
+        margin: 7px;
+    }
+    header nav li{
+        float: left;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;        
+        margin-left: 5px;      
+    }   
+    header nav a{
+        display: block;
+        color: #fff;
+        width: 100%;
+        padding: 7px 10px 7px;
+        border-radius: 5px; 
+    }
+    header nav a:hover{
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .li-active{
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 5px;
+        max-width: max-content;        
+    }
+    .active{
+        display: block;
+        
+        background-color:  rgba(6, 4, 95, 0.9);
+    }
+    /* !--css Icon */
+        .fa-home{
+        font-size: 20px;
+        padding: 0px 15px; 
+        }
+        .fa-fire-alt{
+            font-size: 18px;            
+        }
+
+    /* !---css nav-toggle */
+    .nav-toggle {
+        display: none;
+        cursor: pointer;
+    }
+    #menu.active {
+        min-height: 220px;
+        border-radius: 0px;
+        }
+
+/* ---------------------------------------------------- */
+
+/* !---css bloc logo-Onas */
+   
+    .logoOnas{       
+        text-align: center; 
+        margin-top: 20px;       
+    }
+    .logo-block{
+        width: 20%;
+    }
+    .logo{
+        display: block;
+        background-image: url(../image/logo.png);
+        background-size: 100% 100%;
+        max-width: 60%;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .logo-block a{
+        display: block;
+        margin: 0 auto;
+        color: rgba(43, 41, 41, 0.8);
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .logo-block a:hover{
+        text-decoration: none;
+        color: rgba(120, 120, 120, 0.8);
+    }
+    /* !--- css icon soc.seti */
+    
+    .adresTel{
+        width: 60%;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    .adres .fa-map-marker-alt {
+        width: 10%;
+        color: rgba(84, 221, 4, 0.9);
+        font-size: 30px;
+        margin: 0;        
+    }
+    .fa-map-marker-alt:hover {
+        cursor: pointer;
+    }
+
+    .adres_2{
+        display: none;
+    }
+    .adres_2 a{
+        color: #fff;
+    }
+    .adres_2 a:hover{
+        color: rgb(13, 204, 13);
+    }
+    .tel a{ 
+        color: rgba(40, 40, 40, 0.99);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .tel a:hover{
+        color: rgb(13, 204, 13);
+    }
+    .adresTel i{
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        line-height: 2rem;
+        color: #fff;
+        margin: 0 auto;
+        margin-right: 10px;
+        border-radius: 40px;        
+    }
+    header .fa-facebook-f{
+        background-color: rgba(80, 1, 228, 0.99);
+        padding: 5px;
+    }
+    header .fa-vk{
+        background-color: rgba(15,135,255,0.99);
+        padding-top: 5px;
+    }
+     header .fa-instagram{
+        background-color: rgba(255,110,144,0.99);
+        padding: 5px;
+    }
+    .icon-header a:hover{
+        text-decoration: none;
+    }
+    .btnHeader{
+        width: 20%;
+    }
+    .btnHeader button{
+        background-color: rgba(247, 138, 6, 0.99);
+        margin-top: 10%;
+    }
+    .btnHeader button:hover{
+        background-color: rgba(37, 214, 21, 0.95);
+
+    }
+    /* ----------------------------- */
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------! main page------ */
+    
+    .local-page{
+        margin-top: 30px;
+    }
+    .local-page p{
+        background-color: rgba(190, 190, 190, 0.2) ;
+        max-width: 100%;
+        border-radius: 3px;
+        text-align: left;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        color: rgba(100, 100, 100, 0.99);
+    }
+    .local-page span{
+        margin-right: 5px;
+    }
+    .local-page a{
+        color: rgba(255,178,0, 0.99);
+        margin-right: 10px;
+    }
+    .local-page a:hover{
+        color: red;
+    }
+
+/* ------------------------------------------- */
+/* ---------------------------------------------- */
+/* ------------------------------------- */
+/* !-css main_page */
+.main_page{
+    position: relative;
+    max-width: 100%;
+    min-height: max-content;
+    text-align: center;
+    margin: 0;
+    padding: 0;      
+}
+/* ------------------------------- */
+/* !---css main_home */
+    .main_home{
+        position: relative;
+        max-width: 100%;
+        min-height: max-content;
+        text-align: center;
+        margin: 0;
+        padding: 0;      
+    }
+    /* !---css block-1 */
+        .block-1{
+            max-width: 100%;
+            height: 550px;
+            background-image: url(../image/bg-PalmMir-1.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;            
+            margin-bottom: 50px;
+        }
+        .h2_block-1{
+            font-size: 2em;
+            font-weight: bold;
+            background-color:  rgba(247, 138, 6, 0.99);
+            color: #fff;
+            max-width: max-content;
+            position: relative;
+            top: 70px;
+            padding: 10px;
+            border-radius: 5px; 
+            margin: 0 auto; 
+        }
+        .modul_tyr{
+            margin-top: 150px;
+        }
+    /* -------------------------------------- */
+
+    /* !---css block-2 */
+        .block-2{
+            max-width: 100%;            
+            padding: 70px;
+        }
+        .tyr-operator{
+            margin-bottom: 120px;
+        }
+        .tyr-operator h6{
+            width: 100%;
+            margin-bottom: 50px;
+            color: rgba(120, 120, 120, 0.8);
+            font-weight: normal;
+            overflow: hidden;
+        }
+        .tyr-operator h6::before,
+        .tyr-operator h6::after{
+           content: ' ';
+           display: inline-block;
+           vertical-align: middle;
+           box-sizing: border-box;
+           width: 20%;
+           border-top:  1px solid rgba(120, 120, 120, 0.3);
+           margin: 0 20px;
+        }
+        .tyr-operator img{
+            width: 100px;                       
+            margin-right: 10px;
+        }
+        /* !---css card block-2 */
+            .card-bl-2{
+                position: relative;
+                left: 0;
+                right: 0;        
+                margin: 0 auto;
+                width: 33%;
+                padding: 10px;
+                text-align: left;
+            }
+            .card-bl-2 img{
+                width: 95%;
+                height: 150px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+/* -------------------------------------------------- */
+/* ------------------------------------------------ */
+    
+/* !------ css block-otzov */
+.block-otzov{
+           max-width: 100%;
+            padding-bottom: 100px;
+       }
+       .block-otzov .row{
+           margin: 0 10px;
+
+           border-top: 1px solid rgba(120, 120, 120, 0.8);
+           border-bottom: 1px solid rgba(120, 120, 120, 0.8);
+
+       }
+       .block-otzov article{
+          max-width: 32%;
+          padding: 10px;
+          margin: 0 auto;
+       }
+       .block-otzov img{
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+           margin: 5px;
+       }
+       .block-otzov a{
+           color: rgba(255,178,0, 0.99);
+       }
+
+/* ------------------------------------------------- */
+/* ------------------------------------------- */
+
+    /*  !--- css block-3 */
+       .block-3{
+                background-color: rgba(150, 150, 150, 0.3);
+                max-width: 100%; 
+                padding: 20px;               
+                border-top: 1px solid rgba(120, 120, 120, 0.6);
+                border-bottom: 1px solid rgba(120, 120, 120, 0.6);
+        }
+        .block-3-wrapp{
+            max-width: 100%;
+            padding: 30px;
+        }
+      
+    /*  !-- css block-4 */
+        .block-4{ 
+            position: relative;       
+            max-width: 100%;
+            padding: 20px; 
+        }
+         .block-4-wrapp{
+            max-width: 100%;
+            margin: 0 auto;
+            /* padding: 50px; */
+        } 
+        .block-4 h3{
+            margin-top: 50px;
+        }
+
+    /*  !---css block-5 */
+        .block-5{  
+            max-width: 100%;
+            height: 550px;
+            background-image: url(../image/bg-block-5.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            box-shadow: inset 0 10px 8px rgba(50,50,50,0.5), inset 0 -10px 8px rgba(50,50,50, 0.5); ;
+        }
+        .wrapp-b-5{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(100,100,100, 0.25);
+            text-align: left;
+        }
+        .block-5 article{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .block-5 article h2{
+            padding: 10px;
+        }
+        .block-5 article span{
+            margin-left: 30px;
+        }
+        .o-nas{
+            position: relative;
+            background-color:rgba(250,250,250,0.9);
+            width: 700px;  
+            float: right;          
+            padding: 20px;    
+        }
+        .o-nas li{
+            list-style: none;
+            font-size: 18px;
+            margin: 5px; 
+        }
+        .btn-2{
+            position: absolute;
+            right: 10%;
+            bottom: 25%;
+            background-color: rgba(247, 138, 6, 0.99);
+            /* background-color: rgba(6, 4, 95, 0.5); */
+            color: #fff;
+            font-weight: normal;
+            padding: 10px 20px;
+            border: 0.01px solid rgba(247, 138, 6, 0.99);
+            border-radius: 3px;
+        }
+        .btn-2:hover{
+            background-color: rgba(37, 214, 21, 0.95);
+            /* background-color: rgba(6, 4, 95, 0.8);  */
+        }
+
+    /* ---------------------------------------------- */
+    /* ---------------------------------------------- */
+    /* ---------------------------------------------- */
+
+    /* ! css footer_page */
+    .footer_page{ 
+        position: relative;
+        bottom: -250px; 
+        width: 100%;
+        /* height: 210px; */
+        background-color: rgba(50,50,50,0.9);
+        padding-top: 15px;
+        margin-top: 50px;
+    }
+/* --------------------------------------------- */
+    /* !---css footer_home */       
+        .footer_home{ 
+            position: relative;
+            bottom: 0;          
+            width: 100%;
+            /* height: 210px; */
+            background-color: rgba(50,50,50,0.9);
+            padding-top: 15px;
+            margin: 0px;           
+        }
+        .footer-nav{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        .footer-nav li{
+            float: left;
+            margin: 5px 5px;
+        }
+        .footer-nav a{
+            font-size: 12px;
+            color: #fff;
+        }
+        footer a:hover{
+            color: rgba(255,178,0, 0.99);
+        }
+        .messeges-block{
+            width: 50%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .messeges-block a{
+            display: inline-block;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            text-align: center;
+            border: 1.5px solid #fff;
+            border-radius: 50%;
+            padding: 2px;
+            margin: 5px;
+        }
+        .footer_text-companu{
+            max-width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+        }
+        .fa-copyright{
+            font-size: 12px;
+        }
+
+
+
+
+
+    
